@@ -1,9 +1,11 @@
 vim.opt.linespace = 3
-vim.g.neovide_scale_factor = 1.3
+vim.g.neovide_scale_factor = 1.2
 lvim.builtin.project.manual_mode = true
 
 lvim.builtin.which_key.mappings["-"] = {
-  ":split", "horizontal split"
+  name = "split",
+  ["-"] = { ":split<cr>","horizontal split" },
+  ["|"] = { ":vsplit<cr>","vertical split" }
 }
 
 lvim.builtin.which_key.mappings["o"] = {
